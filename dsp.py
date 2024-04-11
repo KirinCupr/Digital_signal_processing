@@ -60,3 +60,8 @@ def all_xlsx_to_txt():
     for file in files:
         if file[-5:] == '.xlsx':
             xlsx_to_txt(file)
+
+
+# ---
+def txt_to_npy(path):
+    return np.save(path[:-4], np.loadtxt(path))
